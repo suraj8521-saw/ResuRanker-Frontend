@@ -53,14 +53,14 @@ const Testimonials = () => {
     <section className="py-16 md:py-24 relative overflow-hidden z-10 w-full">
       
       {/* Title Section */}
-      <div className="text-center mb-12 px-6">
-        <h3 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-white mb-4">
-          Don't just take our word for it
-        </h3>
-        <p className="text-slate-500 dark:text-slate-400 font-medium">
-          See what other professionals are saying about their success.
-        </p>
-      </div>
+      <div className="w-full max-w-4xl mx-auto mb-12 px-4 sm:px-6 md:px-8 text-center transition-all duration-300">
+  <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-800 dark:text-white mb-4 tracking-tight leading-tight">
+    Don't just take our word for it
+  </h3>
+  <p className="text-sm sm:text-base md:text-lg text-slate-500 dark:text-slate-400 font-medium max-w-xl mx-auto leading-relaxed">
+    See what other professionals are saying about their success.
+  </p>
+</div>
 
       {/* Marquee Container */}
       <div className="relative w-full flex overflow-hidden group">

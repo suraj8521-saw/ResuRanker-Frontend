@@ -58,17 +58,22 @@ const CorporateTestimonials = () => {
     <section className="py-16 md:py-24 relative overflow-hidden z-10 w-full bg-transparent">
       
       {/* Title Header Block */}
-      <div className="text-center mb-12 px-6">
-        <span className="text-xs font-black uppercase tracking-widest px-3 py-1.5 rounded-xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20">
-          Enterprise Validation Index
-        </span>
-        <h3 className="text-3xl md:text-4xl font-black text-slate-800 dark:text-white mt-3 uppercase tracking-tight">
-          Validated by Corporate Talent Specialists
-        </h3>
-        <p className="text-slate-500 dark:text-slate-400 font-extrabold max-w-xl mx-auto text-sm md:text-base mt-1">
-          See how high-volume screening operations leverage our multi-threaded stateless engine.
-        </p>
-      </div>
+      <div className="w-full max-w-4xl mx-auto mb-12 px-4 sm:px-6 md:px-8 text-center transition-all duration-300">
+  {/* 🏷️ Badge Component - Adjusted text padding for mobile view */}
+  <span className="inline-block text-[10px] sm:text-xs font-black uppercase tracking-widest px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20 break-words">
+    Enterprise Validation Index
+  </span>
+  
+  {/* 🎯 Main Heading - Fluid typography to prevent word clipping */}
+  <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-slate-800 dark:text-white mt-4 uppercase tracking-tight leading-tight max-w-3xl mx-auto break-words">
+    Validated by Corporate Talent Specialists
+  </h3>
+  
+  {/* 📝 Subtitle description - Structured font line density */}
+  <p className="text-xs sm:text-sm md:text-base text-slate-500 dark:text-slate-400 font-semibold max-w-lg sm:max-w-xl mx-auto mt-2 leading-relaxed">
+    See how high-volume screening operations leverage our multi-threaded stateless engine.
+  </p>
+</div>
 
       {/* Marquee Track Container Group */}
       <div className="relative w-full flex overflow-hidden group">
