@@ -6,7 +6,7 @@ import {
   Wrench, LayoutDashboard, Info 
 } from 'lucide-react';
 import Testimonials from '../components/ui/Testimonials';
-
+import CorporateTestimonials from '../components/ui/CorporateTestimonials';
 const Home = () => {
   const navigate = useNavigate();
   
@@ -277,9 +277,14 @@ const Home = () => {
       </section>
 
       {/* --- REVIEWS SECTION --- */}
-      <div className="mb-20 w-full relative z-10">
-        <Testimonials />
-      </div>
+      <div className="border-t-2 border-sky-100 dark:border-slate-800 pt-16 space-y-8">
+          <div className="w-full">
+            <Testimonials />
+          </div>
+          <div className="w-full">
+            <CorporateTestimonials />
+          </div>
+        </div>
 
     </div>
   );
