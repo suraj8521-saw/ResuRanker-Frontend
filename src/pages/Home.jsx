@@ -60,7 +60,7 @@ const Home = () => {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
           </span>
-          <span className="text-[10px] md:text-xs font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-wider">New: AI Analysis v2.0</span>
+          <span className="text-[10px] md:text-xs font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-wider">New: AI Analysis v1.0.0</span>
         </div>
 
         <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-tight text-slate-800 dark:text-white leading-[1.1] md:leading-[1.1] uppercase">
@@ -277,14 +277,19 @@ const Home = () => {
       </section>
 
       {/* --- REVIEWS SECTION --- */}
-      <div className="border-t-2 border-sky-100 dark:border-slate-800 pt-16 space-y-8">
-          <div className="w-full">
-            <Testimonials />
-          </div>
-          <div className="w-full">
-            <CorporateTestimonials />
-          </div>
-        </div>
+      <div className="w-full relative overflow-hidden border-t-2 border-sky-100 dark:border-slate-800 pt-10 md:pt-16 space-y-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  
+  {/* 🌟 1. First Testimonials Section Wrapper */}
+  <div className="w-full min-w-0 block clear-both overflow-hidden relative">
+    <Testimonials />
+  </div>
+
+  {/* 🌟 2. Corporate Testimonials Section Wrapper */}
+  <div className="w-full min-w-0 block clear-both overflow-hidden relative">
+    <CorporateTestimonials />
+  </div>
+
+</div>
 
     </div>
   );
