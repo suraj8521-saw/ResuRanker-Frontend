@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+/* 🚨 YAHAN HAI ASLI JADOO: Tailwind v4 Class-based Dark Mode Fix */
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-primary: #6366f1;
+}
+
+@layer base {
+  :root {
+    background-color: #f8fafc; /* Light Mode Background */
+    color: #0f172a; /* Light Mode Text */
+  }
+  
+  .dark {
+    background-color: #020617 !important; /* Premium Midnight Dark */
+    color: #f1f5f9 !important; /* Premium Light Text */
+  }
+}
+/* --- Infinite Marquee Animation --- */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll {
+  /* Yahan time adjust kar sakte ho apni speed ke hisaab se */
+  animation: scroll 30s linear infinite; 
+}
+
+/* Hover karne par scroll ruk jaye, jisse user review padh sake */
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
