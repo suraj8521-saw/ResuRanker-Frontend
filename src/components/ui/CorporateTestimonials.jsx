@@ -58,24 +58,29 @@ const CorporateTestimonials = () => {
     <section className="w-full bg-slate-50 dark:bg-[#0b0f19] py-16 md:py-24 relative overflow-hidden z-10 transition-colors duration-300">
       
       {/* 🎯 Title Header Block - Bulletproof Responsive Grid */}
-      <div className="w-full max-w-4xl mx-auto mb-14 px-4 sm:px-6 md:px-8 text-center block clear-both">
-        {/* 🏷️ Badge Component */}
-        <div className="mb-4">
-          <span className="inline-flex items-center justify-center text-[10px] sm:text-xs font-black uppercase tracking-widest px-3 py-1 rounded-xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20 shadow-sm whitespace-normal text-center">
-            Enterprise Validation Index
-          </span>
-        </div>
-        
-        {/* 🎯 Main Heading */}
-        <h3 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-black text-slate-800 dark:text-white mt-3 uppercase tracking-tight leading-tight max-w-2xl mx-auto whitespace-normal break-words px-1">
-          Validated by Corporate Talent Specialists
-        </h3>
-        
-        {/* 📝 Subtitle description */}
-        <p className="text-xs sm:text-sm md:text-base text-slate-500 dark:text-slate-400 font-semibold max-w-xl mx-auto mt-3 leading-relaxed whitespace-normal break-words px-2">
-          See how high-volume screening operations leverage our multi-threaded stateless engine.
-        </p>
-      </div>
+      {/* Full-bleed Root Wrapper with structural overflow lock */}
+<div className="w-full relative overflow-x-hidden block clear-both bg-transparent py-8 px-4 sm:px-6">
+  <div className="w-full max-w-3xl mx-auto flex flex-col items-center justify-center text-center">
+    
+    {/* 🏷️ Badge Wrapper - Forced Inline-Flex Constraints */}
+    <div className="w-full flex justify-center mb-4">
+      <span className="inline-flex items-center text-[10px] sm:text-xs font-black uppercase tracking-widest px-3 py-1.5 rounded-xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20 whitespace-normal text-center break-words">
+        Enterprise Validation Index
+      </span>
+    </div>
+
+    {/* 🎯 Master Title - Text Fluid Scale with Strict Word Breaking */}
+    <h3 className="w-full text-lg sm:text-xl md:text-3xl font-black text-slate-800 dark:text-white uppercase tracking-tight leading-snug mb-3 whitespace-normal break-words block text-center px-1">
+      Validated by Corporate Talent Specialists
+    </h3>
+
+    {/* 📝 Subtitle Vector Paragraph */}
+    <p className="w-full text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-semibold max-w-xl mx-auto leading-relaxed whitespace-normal break-words block text-center px-2">
+      See how high-volume screening operations leverage our multi-threaded stateless engine.
+    </p>
+
+  </div>
+</div>
 
       {/* 🎪 Marquee Track Container Group */}
       <div className="relative w-full flex overflow-hidden group py-4">
