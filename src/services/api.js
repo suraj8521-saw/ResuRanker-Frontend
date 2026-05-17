@@ -1,18 +1,12 @@
-// 🔥 FIXED: Aapka naya localtunnel live backend link yahan set ho gaya hai
+// Vite proxy live server redirection mapping
 const BASE_URL = "/api/v1";
-
-// Localtunnel ke warning page ko bypass karne ke liye generic headers configuration
-const tunnelHeaders = {
-  "bypass-tunnel-reminder": "true",
-};
 
 export const apiService = {
   // 1. Fetch system roles for dropdown
   fetchSystemRoles: async () => {
     try {
-      const response = await fetch(`${BASE_URL}/resume/roles`, {
-        headers: tunnelHeaders
-      });
+      // 🔥 FIXED: Logs ke mutabik path /resume/roles hoga
+      const response = await fetch(`${BASE_URL}/resume/roles`); 
       if (!response.ok) throw new Error("Roles load karne mein dikkat aayi.");
       const data = await response.json();
       return data.roles || [];
@@ -28,9 +22,9 @@ export const apiService = {
     formData.append("file", file);
     formData.append("target_role", targetRole);
 
-    const response = await fetch(`${BASE_URL}/resume/analyze`, {
+    // 🔥 FIXED: Logs ke mutabik path /resume/analyze hoga
+    const response = await fetch(`${BASE_URL}/resume/analyze`, { 
       method: "POST",
-      headers: tunnelHeaders, // Bypass guard triggered
       body: formData,
     });
 
@@ -46,31 +40,29 @@ export const apiService = {
     const formData = new FormData();
     formData.append("file", file);
 
+    // 🌟 YEH ALREADY PERFECTION SE CHAL RAHA THA (200 OK)
     const response = await fetch(`${BASE_URL}/resume/filter-roles`, {
       method: "POST",
-      headers: tunnelHeaders, // Bypass guard triggered
       body: formData,
     });
 
     if (!response.ok) throw new Error("Matrix cross-matching failed.");
     return await response.json();
   },
-  // Bulk Resumes Screening Controller Engine
+
+  // 4. Bulk Resumes Screening Controller Engine (Corporate Bulk Router)
   bulkShortlistEngine: async (filesArray, primarySkillsStr, secondarySkillsStr) => {
     const formData = new FormData();
     
-    // Natively append multiple files inside a single multi-part array vector
     filesArray.forEach((file) => {
       formData.append("files", file); 
     });
     formData.append("primary_jd", primarySkillsStr);
     formData.append("secondary_jd", secondarySkillsStr);
 
+    // Agar company router ka path bhi /company/bulk-analyze hai, toh ye sahi hai
     const response = await fetch(`${BASE_URL}/company/bulk-analyze`, {
       method: "POST",
-      headers: {
-        "bypass-tunnel-reminder": "true", // Localtunnel bypass security guard
-      },
       body: formData,
     });
 

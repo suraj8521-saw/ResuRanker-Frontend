@@ -12,10 +12,10 @@ export default defineConfig({
     host: '0.0.0.0',
     port: 5173,
     allowedHosts: 'all',
-    // 🔥 MASTER FIX: Ab saari API requests isi single server ke through bypass hongi
     proxy: {
+      // 🚀 MASTER FIX: Ab local requests seedhe Hugging Face live server par bypass hongi
       '/api': {
-        target: 'http://127.0.0.1:8000', // Aapka local FastAPI backend port
+        target: 'https://suraj5632-resuranker-backend.hf.space', 
         changeOrigin: true,
         secure: false,
       }
